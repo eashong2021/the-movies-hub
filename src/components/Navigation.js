@@ -102,9 +102,9 @@ const Navigation = () => {
   }, [data, searchTerm]);
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-grey-dark" ref={wrapperRef}>
+    <nav className="navbar navbar-expand-md navbar-dark bg-grey-dark fixed-top" ref={wrapperRef}>
       <div className="container mt-1 mb-1">
-        <Link className="navbar-brand" to='/movieshub/'>Movies<span className="text-primary" onClick={handleClick}>Hub</span></Link>
+        <Link className="navbar-brand" to='/movieshub/'>TheMovieHub<span className="text-primary" onClick={handleClick}></span></Link>
         <div className='d-flex justify-content-center align-items-center'>
           <div className='hw-1 me-2 d-flex justify-content-center align-items-center' onClick={handleSearchClick}><FiSearch className='hw-2 hide-md' /></div>
           <button className="navbarToggler" type="button" onClick={handleNav} aria-label="MENU">
@@ -115,7 +115,7 @@ const Navigation = () => {
           </button>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mt-3 mt-md-0">
+          <ul className="navbar-nav mt-3 mt-md-0">
             <li className="nav-item ms-md-5">
               <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link>
             </li>
@@ -125,10 +125,14 @@ const Navigation = () => {
             <li className="nav-item ms-md-5">
               <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link>
             </li>
-            <li className="nav-item ms-md-5 d-flex justify-content-center align-items-center pointer" onClick={handleSearchClick}>
-              <FiSearch className='hw-2 hide-sm' />
+          </ul>
+
+          <ul className="navbar-nav mt-3 mt-md-0 ms-auto">
+            <li className="nav-item ms-md-5 d-flex justify-content-center align-items-center pointer " onClick={handleSearchClick}>
+              <FiSearch className='hw-2 hide-sm ' />
             </li>
           </ul>
+          
         </div>
         <div className="searchBox hide" id='search'>
           <div className='container mt-5'>
