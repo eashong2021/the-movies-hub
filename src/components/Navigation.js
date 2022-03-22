@@ -115,9 +115,10 @@ const Navigation = () => {
           </button>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mt-3 mt-md-0">
+          <ul className="navbar-nav mt-3 mt-md-0 ">
             <li className="nav-item ms-md-5">
               <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link>
+              
             </li>
             <li className="nav-item ms-md-5">
               <Link className="nav-link" to='/movieshub/tv' onClick={handleClick}>TV Shows</Link>
@@ -125,6 +126,8 @@ const Navigation = () => {
             <li className="nav-item ms-md-5">
               <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link>
             </li>
+          </ul>
+          <ul className="navbar-nav ms-auto mt-3 mt-md-0">
             <li className="nav-item ms-md-5 d-flex justify-content-center align-items-center pointer" onClick={handleSearchClick}>
               <FiSearch className='hw-2 hide-sm' />
             </li>

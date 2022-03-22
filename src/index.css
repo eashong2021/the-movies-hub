@@ -36,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: #10141f !important;
+  background-color: #f8f9fa !important;
   color: #f8f9fa !important;
 }
 
@@ -245,7 +245,7 @@ iframe {
   letter-spacing: 4px;
   background: linear-gradient(
     90deg,
-    #fcbe11 var(--percent),
+    #FF9529 var(--percent),
     #bdbdbd var(--percent)
   );
   -webkit-background-clip: text;
