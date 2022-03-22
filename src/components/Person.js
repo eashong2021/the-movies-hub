@@ -8,7 +8,7 @@ import axios from 'axios';
 import { FiSlash } from 'react-icons/fi'
 import frame4 from '../resources/Frame4.png'
 const Images = lazy(() => retry(() => import('./Images')));
-const ExternalId = lazy(() => retry(() => import('./ExternalId')));
+const ExternalId = lazy(() => retry(() => import('./Externalid')));
 const RowList = lazy(() => retry(() => import('./RowList')));
 
 const Person = () => {

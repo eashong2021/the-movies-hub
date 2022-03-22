@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, lazy } from "react";
 import { useParams, useHistory } from "react-router";
 import ReadMoreReact from "read-more-react";
@@ -23,7 +24,6 @@ const Keyword = lazy(() => retry(() => import("./Keyword")));
 const Review = lazy(() => retry(() => import("./Review")));
 const ExternalId = lazy(() => retry(() => import("./Externalid")));
 const Video = lazy(() => retry(() => import("./Video")));
-
 const Movie = () => {
   let history = useHistory();
   const id = useParams().id;
