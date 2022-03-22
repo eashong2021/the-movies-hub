@@ -13,7 +13,7 @@ const RowList = lazy(() => retry(() => import('./RowList')));
 const CastList = lazy(() => retry(() => import('./CastList')));
 const Keyword = lazy(() => retry(() => import('./Keyword')));
 const Review = lazy(() => retry(() => import('./Review')));
-const ExternalId = lazy(() => retry(() => import('./ExternalId')));
+const ExternalId = lazy(() => retry(() => import('./Externalid')));
 const WatchOnline = lazy(() => retry(() => import('./WatchOnline')));
 const Video = lazy(() => retry(() => import('./Video')));
 const Season = lazy(() => retry(() => import('./Season')));
