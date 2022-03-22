@@ -4,65 +4,10 @@ import { API_SEARCH, POSTER_PATH, WIDTH_500, avg } from '../constant';
 import { FiX } from "react-icons/fi";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import axios from 'axios';
-import frame1 from '../resources/Frame1.png';
+import frame1 from '../resources/Frame1.png'
 import { FiSearch } from 'react-icons/fi';
-import { DropDownMenu, Select } from '@mui/material';
-
-import styled from 'styled-components';
-
-const Main = styled("div")`
-  font-family: sans-serif;
-`;
-
-const DropDownContainer = styled("div")`
-  width: 10.5em;
-  margin: 0 auto;
-`;
-
-const DropDownHeader = styled("div")`
-  // margin-bottom: 0.8em;
-  // padding: 0.4em 2em 0.4em 1em;
-  // box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-  // font-weight: 500;
-  // font-size: 1rem;
-  // color: #fff;
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #9c757d;
-  text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-`;
-
-const DropDownListContainer = styled("div")``;
-
-const DropDownList = styled("ul")`
-  padding: 0;
-  margin: 0;
-  padding-left: 1em;
-  box-sizing: border-box;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  &:first-child {
-    padding-top: 0.8em;
-  }
-`;
-
-const ListItem = styled("li")`
-  list-style: none;
-  margin-bottom: 0.8em;
-`;
-
-
-
-
-
 
 const Navigation = () => {
-
-  const [isOpen, setIsOpen] = useState(false);
-  const toggling = () => setIsOpen(!isOpen);
-  
 
   const [searchTerm, setSearchTerm] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
@@ -157,9 +102,9 @@ const Navigation = () => {
   }, [data, searchTerm]);
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-grey-dark fixed-top" ref={wrapperRef}>
+    <nav className="navbar navbar-expand-md navbar-dark bg-grey-dark" ref={wrapperRef}>
       <div className="container mt-1 mb-1">
-        <Link className="navbar-brand" to='/movieshub/'>TheMovieHub<span className="text-primary" onClick={handleClick}></span></Link>
+        <Link className="navbar-brand" to='/movieshub/'>Movies<span className="text-primary" onClick={handleClick}>Hub</span></Link>
         <div className='d-flex justify-content-center align-items-center'>
           <div className='hw-1 me-2 d-flex justify-content-center align-items-center' onClick={handleSearchClick}><FiSearch className='hw-2 hide-md' /></div>
           <button className="navbarToggler" type="button" onClick={handleNav} aria-label="MENU">
@@ -170,94 +115,23 @@ const Navigation = () => {
           </button>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mt-3 mt-md-0">
+          <ul className="navbar-nav mt-3 mt-md-0 ">
             <li className="nav-item ms-md-5">
+              <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link>
               
-              <DropDownContainer>
-                <DropDownHeader onMouseMove={toggling}>Movies</DropDownHeader>
-                {isOpen && (
-                  <DropDownListContainer>
-                    <DropDownList>
-                      <ListItem>
-                        Popular
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        Now Playing
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        Upcoming
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        Top Rated
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                    </DropDownList>
-                  </DropDownListContainer>
-                )}
-              </DropDownContainer>
-              
-              {/* <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link> */}
             </li>
             <li className="nav-item ms-md-5">
-              
-              <DropDownContainer>
-                <DropDownHeader onMouseMove={toggling}>TV Shows</DropDownHeader>
-                {isOpen && (
-                  <DropDownListContainer>
-                    <DropDownList>
-                      <ListItem>
-                        Popular
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        Airing Today
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        On TV
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                      <ListItem>
-                        Top Rated
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                    </DropDownList>
-                  </DropDownListContainer>
-                )}
-              </DropDownContainer>
-
-              {/* <Link className="nav-link" to='/movieshub/tv'> */}
-                {/* <Select onMouseOver={handleClick}>TV Shows</Select> */}
-              {/* </Link> */}
+              <Link className="nav-link" to='/movieshub/tv' onClick={handleClick}>TV Shows</Link>
             </li>
             <li className="nav-item ms-md-5">
-              <DropDownContainer>
-                <DropDownHeader onMouseMove={toggling}>People</DropDownHeader>
-                {isOpen && (
-                  <DropDownListContainer>
-                    <DropDownList>
-                      <ListItem>
-                        Popular People
-                        {/* <Link className="nav-link" to='/movieshub/tv'>Mangoes</Link> */}
-                      </ListItem>
-                    </DropDownList>
-                  </DropDownListContainer>
-                )}
-              </DropDownContainer>
-
-              {/* <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link> */}
+              <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link>
             </li>
           </ul>
-
-          <ul className="navbar-nav mt-3 mt-md-0 ms-auto">
-            <li className="nav-item ms-md-5 d-flex justify-content-center align-items-center pointer " onClick={handleSearchClick}>
-              <FiSearch className='hw-2 hide-sm ' />
+          <ul className="navbar-nav ms-auto mt-3 mt-md-0">
+            <li className="nav-item ms-md-5 d-flex justify-content-center align-items-center pointer" onClick={handleSearchClick}>
+              <FiSearch className='hw-2 hide-sm' />
             </li>
           </ul>
-          
         </div>
         <div className="searchBox hide" id='search'>
           <div className='container mt-5'>
