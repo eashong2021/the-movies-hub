@@ -34,7 +34,7 @@ const TrailerList = (props) => {
     }
 
     getData();
-  }, []);
+  }, [api]);
 
   const ref = useRef(null);
 
