@@ -9,7 +9,8 @@ const Loader = () => {
         </svg>
       </div>
       <div className='mt'>
-        Movies<span className="text-primary">Hub</span>
+        {/* TheMovies<span className="text-primary">Hub</span> */}
+        TheMoviesHub
       </div>
     </h2>
   )
