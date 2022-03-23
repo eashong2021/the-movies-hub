@@ -104,7 +104,6 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-grey-dark" ref={wrapperRef}>
       <div className="container mt-1 mb-1">
-        <Link className="navbar-brand" to='/movieshub/'>THeMovieHub<span className="text-primary" onClick={handleClick}></span></Link>
         <Link className="navbar-brand" to='/movieshub/'>TheMovieHub<span className="text-primary" onClick={handleClick}></span></Link>
         <div className='d-flex justify-content-center align-items-center'>
           <div className='hw-1 me-2 d-flex justify-content-center align-items-center' onClick={handleSearchClick}><FiSearch className='hw-2 hide-md' /></div>
