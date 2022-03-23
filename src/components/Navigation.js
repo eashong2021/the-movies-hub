@@ -117,14 +117,55 @@ const Navigation = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mt-3 mt-md-0 ">
             <li className="nav-item ms-md-5">
-              <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link>
-              
+              {/* <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link> */}
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <div className="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Movies
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li className="dropdown-item">Popular</li>
+                      <li className="dropdown-item">Now Playing</li>
+                      <li className="dropdown-item">Upcoming</li>
+                      <li className="dropdown-item">Top Rated</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li className="nav-item ms-md-5">
-              <Link className="nav-link" to='/movieshub/tv' onClick={handleClick}>TV Shows</Link>
+              {/* <Link className="nav-link" to='/movieshub/tv' onClick={handleClick}>TV Shows</Link> */}
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <div className="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      TV Shows
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li className="dropdown-item">Popular</li>
+                      <li className="dropdown-item">Airing Today</li>
+                      <li className="dropdown-item">On TV</li>
+                      <li className="dropdown-item">Top Rated</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li className="nav-item ms-md-5">
-              <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link>
+              {/* <Link className="nav-link" to='/movieshub/people' onClick={handleClick}>People</Link> */}
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <div className="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      People
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li className="dropdown-item">Popular People</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
           <ul className="navbar-nav ms-auto mt-3 mt-md-0">
