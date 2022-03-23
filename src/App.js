@@ -17,8 +17,7 @@ const Episode = lazy(() => retry(() => import('./components/Episode')));
 const Footer = lazy(() => retry(() => import('./components/Footer')));
 
 const App = () => {
-  console.log('%cMade with ❤ by Hit Patel', 'color: black; background: grey; font-size: 15px; padding: 5px 15px; border-radius: 6px');
-
+  
   const pages = [
     {
       pageLink: '/movieshub/',

@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from 'react'
-import { dataList, POSTER_PATH, WIDTH_ORIGINAL, avg } from '../constant';
+import React, { useState, useEffect } from "react";
+import { dataList, POSTER_PATH, WIDTH_ORIGINAL, avg } from "../constant";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import frame2 from '../resources/Frame2.png'
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import frame2 from "../resources/Frame2.png";
 
 const Slick = (props) => {
   const { name } = props;
   const [data, setData] = useState([]);
 
-  let dataNameRow, obj = 'results';
+  let dataNameRow,
+    obj = "results";
   switch (name) {
-    case 'trending':
+    case "trending":
       dataNameRow = dataList.trending;
       break;
 
-    case 'nowPlayingMovie':
+    case "nowPlayingMovie":
       dataNameRow = dataList.nowPlayingMovies;
       break;
 
-    case 'onTheAirTv':
+    case "onTheAirTv":
       dataNameRow = dataList.onTheAirTvs;
       break;
 
@@ -32,14 +33,15 @@ const Slick = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      axios.get(dataNameRow.api)
+      axios
+        .get(dataNameRow.api)
         .then((data) => {
           setData(data.data[obj]);
         })
         .catch((error) => {
           console.error(error);
-        })
-    }
+        });
+    };
 
     getData();
   }, [dataNameRow.api, obj]);
@@ -51,25 +53,52 @@ const Slick = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
   };
 
   return (
     <Slider {...settings}>
-      {data.length > 0 ?
-        data.map((dataRow, index) => (
-          <Link key={index} to={dataRow.media_type ? dataRow.media_type === 'movie' ? dataNameRow.to.movie + dataRow.id : dataNameRow.to.tv + dataRow.id : dataNameRow.to + dataRow.id}>
-            <LazyLoadImage className="img-backdrop h-1 img-slick" src={POSTER_PATH + WIDTH_ORIGINAL + dataRow.backdrop_path} effect="opacity" alt={dataRow.title ? dataRow.title : dataRow.name} onError={(e) => { e.target.onerror = null; e.target.src = frame2 }} />
-            <div className="text-center slider-title vw-100 position-absolute text-center p-md-3 p-sm-2 p-1">
-              <h2>{dataRow.title ? dataRow.title : dataRow.name}</h2>
-              <div>
-              <span className="stars" style={{'--rating': dataRow.vote_average ? avg(dataRow.vote_average) : null}}></span> {dataRow.vote_average ? avg(dataRow.vote_average) : null}
+      {data.length > 0
+        ? data.map((dataRow, index) => (
+            <Link
+              key={index}
+              to={
+                dataRow.media_type
+                  ? dataRow.media_type === "movie"
+                    ? dataNameRow.to.movie + dataRow.id
+                    : dataNameRow.to.tv + dataRow.id
+                  : dataNameRow.to + dataRow.id
+              }
+            >
+              <LazyLoadImage
+                className="img-backdrop h-1 img-slick"
+                src={POSTER_PATH + WIDTH_ORIGINAL + dataRow.backdrop_path}
+                effect="opacity"
+                alt={dataRow.title ? dataRow.title : dataRow.name}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = frame2;
+                }}
+              />
+              <div className="text-center slider-title vw-100 position-absolute text-center p-md-3 p-sm-2 p-1">
+                <h2>{dataRow.title ? dataRow.title : dataRow.name}</h2>
+                <div>
+                  <span
+                    className="stars"
+                    style={{
+                      "--rating": dataRow.vote_average
+                        ? avg(dataRow.vote_average)
+                        : null,
+                    }}
+                  ></span>{" "}
+                  {dataRow.vote_average ? avg(dataRow.vote_average) : null}
+                </div>
               </div>
-            </div>
-          </Link>
-        )) : null}
+            </Link>
+          ))
+        : null}
     </Slider>
-  )
-}
+  );
+};
 
-export default Slick
+export default Slick;
