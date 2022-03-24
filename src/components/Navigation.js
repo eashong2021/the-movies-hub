@@ -282,7 +282,7 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item">Popular People</li>
+                      <li className="dropdown-item"><Link className="nav-link" to='/movieshub/people' onClick={handleClick}>Popular People</Link></li>
                     </ul>
                   </li>
                 </ul>
