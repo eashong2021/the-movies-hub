@@ -211,7 +211,7 @@ const Navigation = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mt-3 mt-md-0 ">
             <li className="nav-item ms-md-5">
-              {/* <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link> */}
+              <Link className="nav-link" to='/movieshub/movie' onClick={handleClick}>Movies</Link>
               <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
@@ -228,7 +228,7 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item">Popular</li>
+                      <li className="dropdown-item"> <Link className="nav-link" to='/movieshub/discover/tv' onClick={handleClick}>Popular</Link></li>
                       <li className="dropdown-item">Now Playing</li>
                       <li className="dropdown-item">Upcoming</li>
                       <li className="dropdown-item">Top Rated</li>

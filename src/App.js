@@ -16,6 +16,8 @@ const MovieList = lazy(() => retry(() => import('./components/MovieList')));
 const Episode = lazy(() => retry(() => import('./components/Episode')));
 const Footer = lazy(() => retry(() => import('./components/Footer')));
 
+const PopularMovies = lazy(() => retry(() => import('./components/PopularMovies')));
+
 const App = () => {
   
   const pages = [
@@ -63,6 +65,11 @@ const App = () => {
       pageLink: '/movieshub/keyword/:id',
       view: MovieList,
       displayName: 'Movies'
+    },
+    {
+      pageLink: '/movieshub/discover/tv',
+      view: PopularMovies,
+      displayName: 'Popular'
     }
   ];
 
