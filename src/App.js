@@ -17,6 +17,9 @@ const Episode = lazy(() => retry(() => import('./components/Episode')));
 const Footer = lazy(() => retry(() => import('./components/Footer')));
 
 const PopularMovies = lazy(() => retry(() => import('./components/PopularMovies')));
+const NowPlayingMovies = lazy(() => retry(() => import('./components/NowPlayingMovies')));
+const UpcomingMovies = lazy(() => retry(() => import('./components/UpcomingMovies')));
+const TopRatedMovies = lazy(() => retry(() => import('./components/TopRatedMovies')));
 
 const App = () => {
   
@@ -70,6 +73,21 @@ const App = () => {
       pageLink: '/movieshub/discover/tv',
       view: PopularMovies,
       displayName: 'Popular'
+    }, 
+    {
+      pageLink: '/movie/now_playing',
+      view: NowPlayingMovies,
+      displayName: 'Now'
+    },
+    {
+      pageLink: '/movie/upcoming',
+      view: UpcomingMovies,
+      displayName: 'Upcoming'
+    },
+    {
+      pageLink: '/movie/top_rated',
+      view: TopRatedMovies,
+      displayName: 'Top Rated'
     }
   ];
 
