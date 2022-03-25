@@ -20,6 +20,7 @@ const PopularMovies = lazy(() => retry(() => import('./components/PopularMovies'
 const NowPlayingMovies = lazy(() => retry(() => import('./components/NowPlayingMovies')));
 const UpcomingMovies = lazy(() => retry(() => import('./components/UpcomingMovies')));
 const TopRatedMovies = lazy(() => retry(() => import('./components/TopRatedMovies')));
+const PopularTvs = lazy(() => retry(() => import('./components/PopularTvs')));
 
 const App = () => {
   
@@ -88,6 +89,11 @@ const App = () => {
       pageLink: '/movie/top_rated',
       view: TopRatedMovies,
       displayName: 'Top Rated'
+    },
+    {
+      pageLink: '/discover/tv',
+      view: PopularTvs,
+      displayName: 'Popular TV'
     }
   ];
 
