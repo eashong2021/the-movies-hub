@@ -257,8 +257,8 @@ const Navigation = () => {
                     >
                       <li className="dropdown-item"><Link className="nav-link" to='/discover/tv' onClick={handleClick}>Popular</Link></li>
                       <li className="dropdown-item"><Link className="nav-link" to='/tv/on_the_air' onClick={handleClick}>Airing Today</Link></li>
-                      <li className="dropdown-item">On TV</li>
-                      <li className="dropdown-item">Top Rated</li>
+                      <li className="dropdown-item"><Link className="nav-link" to='/tv/airing_today' onClick={handleClick}>On TV</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link" to='/tv/top_rated' onClick={handleClick}>Top Rated</Link></li>
                     </ul>
                   </li>
                 </ul>
