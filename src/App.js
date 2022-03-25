@@ -21,6 +21,7 @@ const NowPlayingMovies = lazy(() => retry(() => import('./components/NowPlayingM
 const UpcomingMovies = lazy(() => retry(() => import('./components/UpcomingMovies')));
 const TopRatedMovies = lazy(() => retry(() => import('./components/TopRatedMovies')));
 const PopularTvs = lazy(() => retry(() => import('./components/PopularTvs')));
+const AiringTodayTvs = lazy(() => retry(() => import('./components/AiringTodayTvs')));
 
 const App = () => {
   
@@ -94,6 +95,11 @@ const App = () => {
       pageLink: '/discover/tv',
       view: PopularTvs,
       displayName: 'Popular TV'
+    },
+    {
+      pageLink: '/tv/on_the_air',
+      view: AiringTodayTvs,
+      displayName: 'Airing'
     }
   ];
 

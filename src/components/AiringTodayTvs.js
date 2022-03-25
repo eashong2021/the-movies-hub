@@ -3,15 +3,15 @@ import { retry } from '../utils/CommonFunctions';
 const RowList = lazy(() => retry(() => import('./RowList')));
 const Slick = lazy(() => retry(() => import('./Slick')));
 
-const PopularTvs = () => {
+const Movies = () => {
   return (
     <>
       <Slick name='onTheAirTv' />
       <div className="container">
-        <RowList name='discoverTv' />
+        <RowList name='airingTodayTv' />
       </div>
     </>
   )
 }
 
-export default PopularTvs
+export default Movies
