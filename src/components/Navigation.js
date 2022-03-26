@@ -184,8 +184,8 @@ const Navigation = () => {
     >
       <div className="container mt-1 mb-1">
         <Link className="navbar-brand" to="/movieshub/">
-          Movies
-          <span className="text-primary" onClick={handleClick}>
+          TheMovie
+          <span onClick={handleClick}>
             Hub
           </span>
         </Link>
@@ -216,7 +216,7 @@ const Navigation = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <div
-                      className="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle text-white"
                       id="navbarDarkDropdownMenuLink"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -228,10 +228,10 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item"> <Link className="nav-link" to='/movieshub/discover/tv' onClick={handleClick}>Popular</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/movie/now_playing' onClick={handleClick}>Now Playing</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/movie/upcoming' onClick={handleClick}>Upcoming</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/movie/top_rated' onClick={handleClick}>Top Rated</Link></li>
+                      <li className="dropdown-item"> <Link className="nav-link text-white" to='/movieshub/discover/tv' onClick={handleClick}>Popular</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/now_playing' onClick={handleClick}>Now Playing</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/upcoming' onClick={handleClick}>Upcoming</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/top_rated' onClick={handleClick}>Top Rated</Link></li>
                     </ul>
                   </li>
                 </ul>
@@ -243,7 +243,7 @@ const Navigation = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <div
-                      className="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle text-white"
                       id="navbarDarkDropdownMenuLink"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -255,10 +255,10 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item"><Link className="nav-link" to='/discover/tv' onClick={handleClick}>Popular</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/tv/on_the_air' onClick={handleClick}>Airing Today</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/tv/airing_today' onClick={handleClick}>On TV</Link></li>
-                      <li className="dropdown-item"><Link className="nav-link" to='/tv/top_rated' onClick={handleClick}>Top Rated</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/discover/tv' onClick={handleClick}>Popular</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/tv/on_the_air' onClick={handleClick}>Airing Today</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/tv/airing_today' onClick={handleClick}>On TV</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/tv/top_rated' onClick={handleClick}>Top Rated</Link></li>
                     </ul>
                   </li>
                 </ul>
@@ -270,7 +270,7 @@ const Navigation = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <div
-                      className="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle text-white"
                       id="navbarDarkDropdownMenuLink"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -282,7 +282,7 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item"><Link className="nav-link" to='/movieshub/people' onClick={handleClick}>Popular People</Link></li>
+                      <li className="dropdown-item"><Link className="nav-link text-white" to='/movieshub/people' onClick={handleClick}>Popular People</Link></li>
                     </ul>
                   </li>
                 </ul>

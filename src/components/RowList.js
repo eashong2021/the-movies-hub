@@ -146,22 +146,23 @@ const RowList = (props) => {
         <div className="position-relative">
           <h2>{dataNameRow.name}</h2>
           <div className="d-flex flex-row" ref={ref}>
-            <button
+            {/* <button
               className="btn btn-primary position-absolute scroll-button1 hide"
               onClick={() => scrollRight(500)}
             >
               <FiChevronLeft />
-            </button>
-            <button
+            </button> */}
+            {/* <button
               className="btn btn-primary position-absolute scroll-button2"
               onClick={() => scrollLeft(500)}
             >
               <FiChevronRight />
-            </button>
-            {data.map((dataRow, index) => (
+            </button> */}
+            <div className="row"> 
+              {data.map((dataRow, index) => (
               <div
                 key={index}
-                className="card-link aLink"
+                className="card-link aLink col-6 col-sm-4 col-md-3 col-lg-2 mb-4 card frameWidth"
                 onClick={() => {
                   window.location.href = dataRow.media_type
                     ? dataRow.media_type === "movie"
@@ -202,6 +203,7 @@ const RowList = (props) => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       ) : null}
