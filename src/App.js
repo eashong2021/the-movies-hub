@@ -16,9 +16,17 @@ const MovieList = lazy(() => retry(() => import('./components/MovieList')));
 const Episode = lazy(() => retry(() => import('./components/Episode')));
 const Footer = lazy(() => retry(() => import('./components/Footer')));
 
-const App = () => {
-  console.log('%cMade with ❤ by Hit Patel', 'color: black; background: grey; font-size: 15px; padding: 5px 15px; border-radius: 6px');
+const PopularMovies = lazy(() => retry(() => import('./components/PopularMovies')));
+const NowPlayingMovies = lazy(() => retry(() => import('./components/NowPlayingMovies')));
+const UpcomingMovies = lazy(() => retry(() => import('./components/UpcomingMovies')));
+const TopRatedMovies = lazy(() => retry(() => import('./components/TopRatedMovies')));
+const PopularTvs = lazy(() => retry(() => import('./components/PopularTvs')));
+const AiringTodayTvs = lazy(() => retry(() => import('./components/AiringTodayTvs')));
+const OnTv = lazy(() => retry(() => import('./components/OnTv')));
+const TopRatedTvs = lazy(() => retry(() => import('./components/TopRatedTvs')));
 
+const App = () => {
+  
   const pages = [
     {
       pageLink: '/movieshub/',
@@ -64,6 +72,46 @@ const App = () => {
       pageLink: '/movieshub/keyword/:id',
       view: MovieList,
       displayName: 'Movies'
+    },
+    {
+      pageLink: '/movieshub/discover/tv',
+      view: PopularMovies,
+      displayName: 'Popular'
+    }, 
+    {
+      pageLink: '/movie/now_playing',
+      view: NowPlayingMovies,
+      displayName: 'Now'
+    },
+    {
+      pageLink: '/movie/upcoming',
+      view: UpcomingMovies,
+      displayName: 'Upcoming'
+    },
+    {
+      pageLink: '/movie/top_rated',
+      view: TopRatedMovies,
+      displayName: 'Top Rated'
+    },
+    {
+      pageLink: '/discover/tv',
+      view: PopularTvs,
+      displayName: 'Popular TV'
+    },
+    {
+      pageLink: '/tv/on_the_air',
+      view: AiringTodayTvs,
+      displayName: 'Airing'
+    },
+    {
+      pageLink: '/tv/airing_today',
+      view: OnTv,
+      displayName: 'On TV'
+    },
+    {
+      pageLink: '/tv/top_rated',
+      view: TopRatedTvs,
+      displayName: 'Top TV'
     }
   ];
 
