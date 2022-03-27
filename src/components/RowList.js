@@ -10,7 +10,6 @@ import {
   WIDTH_500,
 } from "../constant";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import axios from "axios";
 import frame1 from "../resources/Frame1.png";
 
@@ -109,36 +108,6 @@ const RowList = (props) => {
   }, [dataNameRow.api, obj]);
 
   const ref = useRef(null);
-
-  const scrollRight = (scrollOffset) => {
-    ref.current.scrollLeft -= scrollOffset;
-    if (
-      !(
-        ref.current.scrollLeft <
-        ref.current.scrollWidth - ref.current.clientWidth * 1.25
-      )
-    ) {
-      ref.current.children[1].classList.remove("hide");
-    }
-    if (ref.current.scrollLeft <= 500) {
-      ref.current.children[0].classList.add("hide");
-    }
-  };
-
-  const scrollLeft = (scrollOffset) => {
-    ref.current.scrollLeft += scrollOffset;
-    if (
-      !(
-        ref.current.scrollLeft <
-        ref.current.scrollWidth - ref.current.clientWidth * 1.25
-      )
-    ) {
-      ref.current.children[1].classList.add("hide");
-    }
-    if (ref.current.scrollLeft >= 0) {
-      ref.current.children[0].classList.remove("hide");
-    }
-  };
 
   return (
     <div className="mt-5">
