@@ -12,17 +12,17 @@ const ExternalId = (props) => {
   switch (name) {
     case 'movie':
       api = API_MOVIE;
-      link = 'https://www.imdb.com/title/';
+      link = 'https://www.tmdb.com/title/';
       break;
 
     case 'tv':
       api = API_TV;
-      link = 'https://www.imdb.com/title/';
+      link = 'https://www.tmdb.com/title/';
       break;
 
     case 'person':
       api = API_PERSON;
-      link = 'https://www.imdb.com/name/';
+      link = 'https://www.tmdb.com/name/';
       break;
 
     default:
