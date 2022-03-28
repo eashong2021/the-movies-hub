@@ -54,6 +54,10 @@ To consume the API https://developers.themoviedb.org/3/movies/get-movie-details 
 
  ## Live Site URL: https://jazzy-entremet-c457c6.netlify.app
 
+ ## Screen Shot:
+ 
+ ![image](./public/Screenshot%20(7).png)
+
 
  ## Processes:
 
