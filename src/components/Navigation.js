@@ -228,7 +228,7 @@ const Navigation = () => {
                       className="dropdown-menu dropdown-menu-dark"
                       aria-labelledby="navbarDarkDropdownMenuLink"
                     >
-                      <li className="dropdown-item"> <Link className="nav-link text-white" to='/movieshub/discover/tv' onClick={handleClick}>Popular</Link></li>
+                      <li className="dropdown-item"> <Link className="nav-link text-white" to='/discover/movie' onClick={handleClick}>Popular</Link></li>
                       <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/now_playing' onClick={handleClick}>Now Playing</Link></li>
                       <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/upcoming' onClick={handleClick}>Upcoming</Link></li>
                       <li className="dropdown-item"><Link className="nav-link text-white" to='/movie/top_rated' onClick={handleClick}>Top Rated</Link></li>

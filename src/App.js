@@ -74,7 +74,7 @@ const App = () => {
       displayName: 'Movies'
     },
     {
-      pageLink: '/movieshub/discover/tv',
+      pageLink: '/discover/movie',
       view: PopularMovies,
       displayName: 'Popular'
     }, 
