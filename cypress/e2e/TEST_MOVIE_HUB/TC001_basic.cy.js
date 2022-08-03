@@ -1,12 +1,15 @@
-describe('', () => {
+describe('Navigation bar', () => {
     
   it('visit the movie hub', () => {
       cy.visit('/')
-
-  })
-  it('visit the movie hub', () => {
-      cy.visit('/')
-
-  })
+      cy.get('.hw-2').should('be.visible').click()
+      cy.location('protocol').contains('eq', 'localhost')
+      cy.get('.hw-3 pointer').should('be.visible').click()
+      cy.location('protocol').contains('eq', 'localhost')
+      cy.get('#searchInput').type('Batman')
+      cy.get('.img-fluid').should('be.visible').click()
+      cy.url().contains('eq', '268').should('be.visible')
+      cy.get('.btn btn-primary').contains('eq', 'Watch online').should('be.visible')
+})
 
 })
